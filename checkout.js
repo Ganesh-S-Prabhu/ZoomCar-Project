@@ -106,6 +106,9 @@ function appendData(element){
          console.log("err:",err);
        }
       }
+      else{
+        alert("Token is incorrect")
+      }
        
    })
    coupon_button.innerHTML="Apply Coupon"

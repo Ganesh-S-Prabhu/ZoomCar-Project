@@ -50,7 +50,7 @@ async function signin(e){
         var t=document.querySelector(".successfully-login-popUp");
         t.setAttribute('id','successfully_login')
         console.log(data);
-    localStorage.setItem("token",data.token);
+    localStorage.setItem("userid",data.user._id);
     }
        
         // window.location.href="index.html"
@@ -124,7 +124,7 @@ async function main_signup(e){
             alert(data.message);
         }
         else{
-            localStorage.setItem("token",data.token);
+            localStorage.setItem("userid",JSON.stringify(data.user._id));
             console.log(data);
                 window.location.href="index.html";
         }

@@ -260,6 +260,7 @@ async function displayData(carDataArray){
             enddate:end,
             price:elem.price,
             carid:elem._id,
+            userid:(localStorage.getItem("userid"))
           }
           booking_json_data=JSON.stringify(bookingdata);
           let res=await fetch("http://localhost:5000/bookings",{
@@ -271,7 +272,7 @@ async function displayData(carDataArray){
               headers:{
                 "Content-Type":'application/json',
 
-                authorization:token,
+                // authorization:token,
               },
   });
   let data=await res.json();
